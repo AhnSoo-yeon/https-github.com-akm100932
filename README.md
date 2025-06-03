@@ -15,6 +15,7 @@ python calculator.py add 1 2        # Outputs 3
 python calculator.py subtract 5 3   # Outputs 2
 python calculator.py multiply 2 4   # Outputs 8
 python calculator.py divide 10 2    # Outputs 5
+python calculator.py power 2 3      # Outputs 8
 ```
 
-The calculator supports four basic operations: addition, subtraction, multiplication, and division. Division by zero results in an error.
+The calculator supports five basic operations: addition, subtraction, multiplication, division, and exponentiation. Division by zero results in an error.

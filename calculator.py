@@ -19,6 +19,10 @@ def divide(a, b):
     return a / b
 
 
+def power(a, b):
+    return a ** b
+
+
 def main():
     parser = argparse.ArgumentParser(description="Simple command-line calculator")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -39,6 +43,10 @@ def main():
     div_parser.add_argument("a", type=float, help="First operand")
     div_parser.add_argument("b", type=float, help="Second operand")
 
+    pow_parser = subparsers.add_parser("power", help="Raise a to the power of b")
+    pow_parser.add_argument("a", type=float, help="Base value")
+    pow_parser.add_argument("b", type=float, help="Exponent value")
+
     args = parser.parse_args()
 
     if args.command == "add":
@@ -49,6 +57,8 @@ def main():
         result = multiply(args.a, args.b)
     elif args.command == "divide":
         result = divide(args.a, args.b)
+    elif args.command == "power":
+        result = power(args.a, args.b)
     else:
         parser.error("Unknown command")
 
